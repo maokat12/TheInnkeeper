@@ -1,1 +1,1 @@
-worker: node <innkeeper.js>
+worker: node innkeeper.js
