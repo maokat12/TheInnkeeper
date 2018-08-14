@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const fs = require("fs");
 
 client.on("ready", () => {
   console.log("I am ready!");
@@ -13,16 +12,16 @@ client.on("presenceUpdate", (oldMember, newMember) => {
 
   if ((oldMember.presence.status=== "offline") && (newMember.presence.status === "online")) {
       console.log("join");
-      client.channels.get("466645134721941525").send("Hello o/ @" + oldMember.user);
+      client.channels.get("466645134721941525").send("Hello o/" + oldMember.user);
   } else if ((oldMember.presence.status === 'online') && (newMember.presence.status === "offline")) {
       console.log("leave");
-      client.channels.get("466645134721941525").send("Goodbye o/");
+      client.channels.get("466645134721941525").send("Goodbye o/" + oldMember.user);
   } else if ((oldMember.presence.status === 'dnd') && (newMember.presence.status === "offline")) {
       console.log("leave");
-      client.channels.get("466645134721941525").send("Goodbye o/");
+      client.channels.get("466645134721941525").send("Goodbye o/" + oldMember.user);
   } else if ((oldMember.presence.status === 'idle') && (newMember.presence.status === "offline")) {
       console.log("leave");
-      client.channels.get("466645134721941525").send("Goodbye o/");
+      client.channels.get("466645134721941525").send("Goodbye o/" + oldMember.user);
   }
 });
 //for Heroku
