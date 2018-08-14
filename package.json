@@ -1,0 +1,12 @@
+{
+  "name": "Test",
+  "description": "Test",
+  "version": "0.0.0",
+  "main": "innkeeper.js",
+  "scripts": {
+    "start": "node innkeeper.js"
+  },
+  "dependencies": {
+    "discord.js": "11.1.0"
+    "reequest": "2.01.0";
+}
